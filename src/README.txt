@@ -1,0 +1,57 @@
+Adam Yee
+COMP 251 - Project 2: Neural Networks
+12/1/2011
+
+*** Requirements *** 
+The Python scripts are written in Python2.7 syntax and will only run on a
+Python2.7+ interpreter.
+
+It would be a best to test this program on a multi-core machine if testing on 
+a personal computer. Otherwise run this program on a dedicated server for best 
+performance. Running the code will take 100% use of a single CPU.
+
+
+*** Usage ***
+In order to execute a program, do the following and follow the prompts:
+
+~$ python2.7 neuralnetwork.py
+~$ python2.7 NNanalysis.py
+
+The program's prompts are simple and self-explanatory.
+
+
+*** Logging And How To Read Output To File ***
+neuralnetwork.py has the option to log the training and final test output to a
+file called 'NN-single-test.txt'. Each output written to file is labeled. For example:
+
+(Sample output to file)
+----------------------------------------------------------------
+Single test
+classification limits: 0.1 < output > 0.9
+hidden layers: 3
+neurons per layer: 13
+epochs: 100
+total training time: 158.976098776
+List of error rates per epoch:
+[0.5028901734104047, 0.48554913294797686, 0.4393063583815029, 0.2543352601156069, 0.1907514450867052, 0.1676300578034682, 0.16184971098265896, 0.13872832369942195, 0.21965317919075145, 0.11560693641618497, 0.14450867052023122, 0.1907514450867052, 0.1329479768786127, 0.1329479768786127, 0.13872832369942195, 0.14450867052023122, 0.11560693641618497, 0.16184971098265896, 0.15606936416184972, 0.10982658959537572, 0.10982658959537572, 0.14450867052023122, 0.1907514450867052, 0.12716763005780346, 0.12138728323699421, 0.08092485549132948, 0.07514450867052024, 0.10404624277456648, 0.1329479768786127, 0.09248554913294797, 0.06936416184971098, 0.08670520231213873, 0.057803468208092484, 0.09248554913294797, 0.05202312138728324, 0.06936416184971098, 0.07514450867052024, 0.046242774566473986, 0.046242774566473986, 0.11560693641618497, 0.08092485549132948, 0.11560693641618497, 0.10982658959537572, 0.06358381502890173, 0.057803468208092484, 0.046242774566473986, 0.05202312138728324, 0.03468208092485549, 0.04046242774566474, 0.10404624277456648, 0.028901734104046242, 0.028901734104046242, 0.03468208092485549, 0.011560693641618497, 0.06358381502890173, 0.023121387283236993, 0.028901734104046242, 0.028901734104046242, 0.03468208092485549, 0.028901734104046242, 0.046242774566473986, 0.011560693641618497, 0.023121387283236993, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.017341040462427744, 0.017341040462427744, 0.005780346820809248, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.017341040462427744, 0.023121387283236993, 0.017341040462427744, 0.03468208092485549, 0.028901734104046242, 0.023121387283236993, 0.017341040462427744, 0.005780346820809248, 0.023121387283236993, 0.011560693641618497, 0.011560693641618497, 0.011560693641618497, 0.0, 0.011560693641618497, 0.017341040462427744]
+optima epoch: 97 @ 0.0
+Error rate at 100 epoch: 0.0173410404624, TP[170], FP[3], TN[170], FN[3]
+----------------------------------------------------------------
+
+NNanalysis.py automatically writes analysis output to files 'finding-optima-epoch.txt'
+and 'NN-kfoldcrossvalidation.txt'. In each file, output layer classification limits are
+labeled at the beginning of each analysis. Trained network output is written to
+file in this format:
+
+(Sample output to file)
+----------------------------------------------------------------
+[# of hidden layers] [# of neurons per layer] [learning rate]
+[# of epochs]
+error rate: [error rate of the last trained epoch]
+T/F analysis: TP[#], FP[#], TN[#], FN[#]
+[total training time]
+----------------------------------------------------------------
+
+At the end of K-Fold Cross Validation analysis, all error rates are recorded for each
+fold tested, followed by the averaged error rate over all folds, and lastly the aggregate
+true/false outputs of all folds are recorded.

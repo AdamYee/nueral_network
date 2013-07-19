@@ -1,0 +1,57 @@
+First shown is the basic structure of the network
+Hidden layers are follow this notation: N(neuron)|(layer)
+Inputs:		maint-vhigh, maint-high, maint-med, maint-low, persons-2, persons-4, persons-more, lug_boot-small, lug_boot-med, lug_boot-big, safety-low, safety-med, safety-high, doors-2, doors-3, doors-4, doors-5more, buying-vhigh, buying-high, buying-med, buying-low, 
+Layer 0:	N0|0, N1|0, N2|0, N3|0, N4|0, N5|0, N6|0, N7|0, N8|0, N9|0, N10|0, N11|0, N12|0, 
+Layer 1:	N0|1, N1|1, N2|1, N3|1, N4|1, N5|1, N6|1, N7|1, N8|1, N9|1, N10|1, N11|1, N12|1, 
+Layer 2:	N0|2, N1|2, N2|2, N3|2, N4|2, N5|2, N6|2, N7|2, N8|2, N9|2, N10|2, N11|2, N12|2, 
+Output Layer:	unacc, acc, good, vgood, 
+
+Second shown is the network with weights listed for each neuron's inputs
+Neuron	Weights
+N0|0	{ buying-high: 0.98, buying-low: 2.34, buying-med: 1.42, buying-vhigh: -1.71, doors-2: 1.04, doors-3: -3.55, doors-4: 2.09, doors-5more: 2.84, lug_boot-big: 2.01, lug_boot-med: -1.92, lug_boot-small: 0.51, maint-high: 0.04, maint-low: 2.46, maint-med: 1.87, maint-vhigh: -0.44, persons-2: 0.17, persons-4: -2.34, persons-more: 3.90, safety-high: 3.35, safety-low: -3.56, safety-med: 2.59,  }
+N1|0	{ buying-high: 2.02, buying-low: 0.18, buying-med: 0.47, buying-vhigh: 2.25, doors-2: 9.31, doors-3: 2.01, doors-4: -1.40, doors-5more: -2.73, lug_boot-big: 3.33, lug_boot-med: -5.19, lug_boot-small: 5.49, maint-high: 2.16, maint-low: 0.44, maint-med: 0.39, maint-vhigh: 3.56, persons-2: 3.96, persons-4: 3.51, persons-more: -2.22, safety-high: 0.47, safety-low: 1.94, safety-med: 1.08,  }
+N2|0	{ buying-high: -2.38, buying-low: 4.34, buying-med: 2.02, buying-vhigh: -1.82, doors-2: -6.56, doors-3: 1.00, doors-4: 4.03, doors-5more: 3.71, lug_boot-big: 9.24, lug_boot-med: 0.73, lug_boot-small: -7.64, maint-high: 1.65, maint-low: 0.25, maint-med: 1.96, maint-vhigh: -3.37, persons-2: -1.51, persons-4: 1.91, persons-more: 2.25, safety-high: 5.93, safety-low: -3.62, safety-med: -2.40,  }
+N3|0	{ buying-high: 6.46, buying-low: -10.09, buying-med: 1.14, buying-vhigh: 3.97, doors-2: 1.69, doors-3: 1.15, doors-4: 0.20, doors-5more: 0.54, lug_boot-big: -2.22, lug_boot-med: -0.04, lug_boot-small: 6.09, maint-high: 8.73, maint-low: -10.84, maint-med: 1.13, maint-vhigh: 4.63, persons-2: 1.62, persons-4: 0.78, persons-more: -0.94, safety-high: -2.82, safety-low: 3.29, safety-med: 2.37,  }
+N4|0	{ buying-high: -0.41, buying-low: 1.14, buying-med: 0.71, buying-vhigh: -2.35, doors-2: 0.94, doors-3: 4.81, doors-4: -2.79, doors-5more: -3.61, lug_boot-big: 0.82, lug_boot-med: 2.47, lug_boot-small: -4.80, maint-high: 0.04, maint-low: 0.72, maint-med: 0.80, maint-vhigh: -2.44, persons-2: -1.36, persons-4: 4.79, persons-more: -1.53, safety-high: 1.54, safety-low: -2.16, safety-med: 0.25,  }
+N5|0	{ buying-high: 2.97, buying-low: -3.67, buying-med: 0.98, buying-vhigh: 4.57, doors-2: 0.44, doors-3: -0.86, doors-4: 1.90, doors-5more: 1.88, lug_boot-big: 2.14, lug_boot-med: 1.35, lug_boot-small: 1.43, maint-high: -0.70, maint-low: 0.04, maint-med: -0.37, maint-vhigh: 5.65, persons-2: 4.45, persons-4: -3.01, persons-more: 1.86, safety-high: -3.01, safety-low: 3.07, safety-med: 5.65,  }
+N6|0	{ buying-high: 3.13, buying-low: -2.38, buying-med: -4.69, buying-vhigh: 4.46, doors-2: -0.31, doors-3: 0.07, doors-4: 2.25, doors-5more: 1.63, lug_boot-big: 1.78, lug_boot-med: 1.74, lug_boot-small: -2.49, maint-high: -2.50, maint-low: -1.62, maint-med: -2.11, maint-vhigh: 7.29, persons-2: 6.46, persons-4: -2.59, persons-more: -1.59, safety-high: 0.13, safety-low: 5.56, safety-med: -4.66,  }
+N7|0	{ buying-high: 3.40, buying-low: 0.70, buying-med: -0.89, buying-vhigh: -0.45, doors-2: 3.91, doors-3: 1.45, doors-4: -0.87, doors-5more: -0.98, lug_boot-big: -5.62, lug_boot-med: 0.86, lug_boot-small: 7.75, maint-high: -2.46, maint-low: 1.85, maint-med: 0.83, maint-vhigh: 4.46, persons-2: -1.34, persons-4: 2.66, persons-more: 1.54, safety-high: -4.37, safety-low: -1.17, safety-med: 7.68,  }
+N8|0	{ buying-high: 1.61, buying-low: 2.19, buying-med: -3.99, buying-vhigh: 2.54, doors-2: 1.80, doors-3: 1.22, doors-4: -0.63, doors-5more: -0.12, lug_boot-big: -4.35, lug_boot-med: 3.43, lug_boot-small: 5.51, maint-high: 4.54, maint-low: -3.15, maint-med: -1.53, maint-vhigh: 4.53, persons-2: 7.71, persons-4: -3.32, persons-more: -2.05, safety-high: -5.90, safety-low: 7.91, safety-med: 2.39,  }
+N9|0	{ buying-high: 4.70, buying-low: -4.45, buying-med: -0.88, buying-vhigh: 4.92, doors-2: 3.92, doors-3: 1.73, doors-4: -0.51, doors-5more: -0.51, lug_boot-big: -1.98, lug_boot-med: 3.93, lug_boot-small: 1.58, maint-high: 2.85, maint-low: -2.07, maint-med: -2.17, maint-vhigh: 4.57, persons-2: 5.24, persons-4: -0.79, persons-more: -0.93, safety-high: -2.75, safety-low: 4.91, safety-med: 0.06,  }
+N10|0	{ buying-high: 7.44, buying-low: -1.20, buying-med: -3.30, buying-vhigh: 0.72, doors-2: 2.43, doors-3: -0.30, doors-4: 0.24, doors-5more: 0.38, lug_boot-big: -1.29, lug_boot-med: -0.31, lug_boot-small: 1.62, maint-high: -5.74, maint-low: 2.55, maint-med: 0.39, maint-vhigh: 4.38, persons-2: 7.69, persons-4: -4.13, persons-more: -2.11, safety-high: -4.13, safety-low: 5.89, safety-med: -2.15,  }
+N11|0	{ buying-high: 4.22, buying-low: 2.11, buying-med: -3.22, buying-vhigh: -4.66, doors-2: -1.10, doors-3: 0.48, doors-4: -0.90, doors-5more: -0.95, lug_boot-big: -1.86, lug_boot-med: -0.79, lug_boot-small: -1.41, maint-high: -5.05, maint-low: 1.91, maint-med: 1.75, maint-vhigh: 0.79, persons-2: -9.52, persons-4: 3.99, persons-more: 2.46, safety-high: 3.72, safety-low: -8.91, safety-med: 4.37,  }
+N12|0	{ buying-high: -1.21, buying-low: 1.63, buying-med: 2.56, buying-vhigh: -4.07, doors-2: 2.06, doors-3: -3.37, doors-4: -0.77, doors-5more: 0.19, lug_boot-big: -2.38, lug_boot-med: -2.96, lug_boot-small: 1.10, maint-high: -0.88, maint-low: 1.76, maint-med: 2.07, maint-vhigh: -4.11, persons-2: -6.74, persons-4: 0.77, persons-more: 4.27, safety-high: 1.31, safety-low: -6.26, safety-med: 3.04,  }
+
+N0|1	{ N0|0: 1.82, N10|0: -3.05, N11|0: 2.60, N12|0: 1.49, N1|0: -3.25, N2|0: 1.57, N3|0: -4.49, N4|0: 2.06, N5|0: -3.37, N6|0: -2.33, N7|0: -7.01, N8|0: -2.39, N9|0: -2.70,  }
+N1|1	{ N0|0: -1.55, N10|0: 1.93, N11|0: -1.20, N12|0: -1.67, N1|0: 3.26, N2|0: -0.88, N3|0: 2.62, N4|0: -2.43, N5|0: 2.46, N6|0: 2.39, N7|0: 6.61, N8|0: 0.95, N9|0: 1.76,  }
+N2|1	{ N0|0: 1.55, N10|0: 1.16, N11|0: 1.29, N12|0: -0.45, N1|0: 1.30, N2|0: 0.51, N3|0: 0.42, N4|0: -0.23, N5|0: 0.50, N6|0: 0.68, N7|0: 0.67, N8|0: 0.17, N9|0: 0.39,  }
+N3|1	{ N0|0: 3.72, N10|0: -5.13, N11|0: 6.75, N12|0: 4.84, N1|0: -4.67, N2|0: 5.72, N3|0: -2.87, N4|0: 3.36, N5|0: -5.11, N6|0: -3.67, N7|0: 1.48, N8|0: -3.79, N9|0: -3.08,  }
+N4|1	{ N0|0: 1.07, N10|0: -4.15, N11|0: 6.31, N12|0: 4.62, N1|0: -2.57, N2|0: 4.14, N3|0: -2.32, N4|0: 2.53, N5|0: -2.96, N6|0: -3.48, N7|0: 0.78, N8|0: -2.85, N9|0: -1.88,  }
+N5|1	{ N0|0: 1.16, N10|0: -0.52, N11|0: 0.74, N12|0: 1.69, N1|0: -0.14, N2|0: 0.29, N3|0: 1.24, N4|0: 0.24, N5|0: 0.12, N6|0: -0.58, N7|0: 0.13, N8|0: 0.48, N9|0: -0.11,  }
+N6|1	{ N0|0: -0.90, N10|0: 0.77, N11|0: -2.09, N12|0: -0.70, N1|0: 1.59, N2|0: -0.49, N3|0: 3.11, N4|0: -2.15, N5|0: 1.49, N6|0: 2.10, N7|0: 3.85, N8|0: 1.97, N9|0: 0.85,  }
+N7|1	{ N0|0: -3.43, N10|0: 3.80, N11|0: -1.26, N12|0: -3.62, N1|0: 4.92, N2|0: -1.70, N3|0: 11.45, N4|0: -2.11, N5|0: 2.52, N6|0: 8.94, N7|0: -0.08, N8|0: 5.77, N9|0: 4.92,  }
+N8|1	{ N0|0: -3.51, N10|0: 4.21, N11|0: -4.82, N12|0: -3.77, N1|0: 4.33, N2|0: -5.16, N3|0: 1.76, N4|0: -3.84, N5|0: 4.86, N6|0: 2.01, N7|0: -1.16, N8|0: 2.92, N9|0: 2.11,  }
+N9|1	{ N0|0: 0.66, N10|0: -1.03, N11|0: 1.02, N12|0: 0.17, N1|0: 0.29, N2|0: 0.31, N3|0: -0.06, N4|0: -0.71, N5|0: 0.56, N6|0: -0.66, N7|0: 1.32, N8|0: 0.66, N9|0: 0.65,  }
+N10|1	{ N0|0: 0.15, N10|0: 0.64, N11|0: 1.89, N12|0: 0.43, N1|0: 1.06, N2|0: 0.11, N3|0: 0.61, N4|0: 0.16, N5|0: 0.33, N6|0: 0.83, N7|0: 1.04, N8|0: -0.62, N9|0: 0.48,  }
+N11|1	{ N0|0: 0.21, N10|0: 2.92, N11|0: -1.20, N12|0: -1.56, N1|0: 3.03, N2|0: -2.26, N3|0: 4.63, N4|0: -0.84, N5|0: 1.04, N6|0: 3.33, N7|0: -0.87, N8|0: 2.94, N9|0: 2.12,  }
+N12|1	{ N0|0: 0.29, N10|0: -2.06, N11|0: 2.09, N12|0: 0.95, N1|0: -3.80, N2|0: 1.43, N3|0: -0.84, N4|0: 2.17, N5|0: -0.91, N6|0: -1.42, N7|0: 1.07, N8|0: -3.83, N9|0: -1.61,  }
+
+N0|2	{ N0|1: 0.27, N10|1: 0.07, N11|1: -0.22, N12|1: -0.21, N1|1: -0.01, N2|1: 0.47, N3|1: 1.57, N4|1: 0.53, N5|1: 1.06, N6|1: 1.09, N7|1: -0.37, N8|1: 1.04, N9|1: 1.07,  }
+N1|2	{ N0|1: 0.81, N10|1: 0.29, N11|1: 0.89, N12|1: 0.90, N1|1: 1.01, N2|1: 0.92, N3|1: 0.78, N4|1: 0.04, N5|1: 0.85, N6|1: 0.32, N7|1: -0.05, N8|1: 0.12, N9|1: 1.11,  }
+N2|2	{ N0|1: 0.98, N10|1: 1.23, N11|1: 0.81, N12|1: 0.61, N1|1: -0.08, N2|1: 0.16, N3|1: 1.44, N4|1: -0.46, N5|1: 0.25, N6|1: 1.29, N7|1: -0.31, N8|1: -0.19, N9|1: 1.11,  }
+N3|2	{ N0|1: 1.45, N10|1: 0.13, N11|1: -1.14, N12|1: 1.01, N1|1: -1.54, N2|1: 0.37, N3|1: 1.32, N4|1: 0.29, N5|1: 0.58, N6|1: -0.74, N7|1: -2.41, N8|1: 0.36, N9|1: 0.79,  }
+N4|2	{ N0|1: -6.53, N10|1: -0.26, N11|1: 0.37, N12|1: 0.66, N1|1: 5.97, N2|1: -0.05, N3|1: -1.56, N4|1: -1.21, N5|1: 0.15, N6|1: 3.90, N7|1: 2.51, N8|1: 2.69, N9|1: 0.88,  }
+N5|2	{ N0|1: 0.41, N10|1: -0.53, N11|1: 1.78, N12|1: -1.36, N1|1: -0.12, N2|1: -0.55, N3|1: -2.69, N4|1: -1.49, N5|1: -0.33, N6|1: 0.84, N7|1: 0.69, N8|1: 1.42, N9|1: 0.31,  }
+N6|2	{ N0|1: 1.37, N10|1: 0.52, N11|1: 0.70, N12|1: -0.58, N1|1: -0.36, N2|1: 1.34, N3|1: 0.64, N4|1: 0.52, N5|1: 0.07, N6|1: 0.24, N7|1: 0.97, N8|1: 0.15, N9|1: 1.12,  }
+N7|2	{ N0|1: 1.27, N10|1: -0.37, N11|1: -0.77, N12|1: 1.54, N1|1: 0.23, N2|1: -0.40, N3|1: 1.88, N4|1: 2.12, N5|1: 0.37, N6|1: -0.78, N7|1: -0.71, N8|1: -2.11, N9|1: 1.01,  }
+N8|2	{ N0|1: -3.66, N10|1: 0.08, N11|1: 4.77, N12|1: -4.04, N1|1: 1.29, N2|1: -0.34, N3|1: -1.44, N4|1: -2.47, N5|1: -0.46, N6|1: 2.13, N7|1: 9.51, N8|1: 3.00, N9|1: -0.45,  }
+N9|2	{ N0|1: 0.94, N10|1: 0.15, N11|1: -1.21, N12|1: 2.08, N1|1: -1.07, N2|1: -0.50, N3|1: 2.30, N4|1: 2.67, N5|1: 0.46, N6|1: 0.61, N7|1: -0.51, N8|1: -2.24, N9|1: 0.75,  }
+N10|2	{ N0|1: -0.85, N10|1: -0.93, N11|1: 2.35, N12|1: -1.63, N1|1: 1.71, N2|1: 0.39, N3|1: -4.79, N4|1: -4.55, N5|1: -1.08, N6|1: 0.19, N7|1: 1.54, N8|1: 4.29, N9|1: -0.88,  }
+N11|2	{ N0|1: -1.67, N10|1: -0.75, N11|1: 2.74, N12|1: -1.76, N1|1: 1.23, N2|1: 0.26, N3|1: -3.33, N4|1: -3.27, N5|1: -0.97, N6|1: 0.80, N7|1: 1.51, N8|1: 3.47, N9|1: -1.41,  }
+N12|2	{ N0|1: 1.32, N10|1: 0.48, N11|1: 0.39, N12|1: 1.37, N1|1: -1.13, N2|1: -0.37, N3|1: 2.43, N4|1: 1.20, N5|1: -0.42, N6|1: -0.72, N7|1: 0.65, N8|1: -1.72, N9|1: 0.53,  }
+
+unacc	{ N0|2: -1.00, N10|2: 2.74, N11|2: 2.52, N12|2: -1.59, N1|2: 0.45, N2|2: -1.32, N3|2: -0.58, N4|2: 1.70, N5|2: 1.21, N6|2: -1.12, N7|2: -2.19, N8|2: 2.22, N9|2: -2.15,  }
+acc	{ N0|2: -2.19, N10|2: -4.25, N11|2: -2.98, N12|2: 0.92, N1|2: -2.00, N2|2: -2.21, N3|2: -2.76, N4|2: 3.40, N5|2: -1.40, N6|2: -2.70, N7|2: 0.56, N8|2: 7.58, N9|2: 1.50,  }
+good	{ N0|2: -0.04, N10|2: -0.78, N11|2: -1.35, N12|2: -0.48, N1|2: -1.96, N2|2: -0.20, N3|2: 0.73, N4|2: 6.95, N5|2: -0.53, N6|2: -1.99, N7|2: 0.83, N8|2: -7.82, N9|2: -0.43,  }
+vgood	{ N0|2: -0.41, N10|2: -1.15, N11|2: -0.72, N12|2: 1.25, N1|2: -1.04, N2|2: -0.91, N3|2: 2.43, N4|2: -7.26, N5|2: 0.09, N6|2: 0.97, N7|2: 0.17, N8|2: -2.83, N9|2: 1.44,  }
+
